@@ -10,6 +10,5 @@ Package: huayra-postinstall-pci
 Architecture: all
 Depends: ${misc:Depends}
 Description: Configuraciones para netbooks del PCI con Huayra recién instalado
- Este paquete contiene scripts para configurar la netbook y dejarla lista para 
-el uso escolar.
+ Este paquete contiene scripts para configurar la netbook y dejarla lista para el uso escolar.
 
