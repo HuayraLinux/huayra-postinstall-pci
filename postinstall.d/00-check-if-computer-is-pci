@@ -1,0 +1,10 @@
+#!/bin/bash
+
+zenity --question --text="Esta aplicación instalará configuraciones pensadas *solamente* para las netbooks del Programa Conectar Igualdad. Si esta computadora no es el programa, se podrían perder datos o algunos programas podrían dejar de funcionar. ¿Desea continuar con la instalación?"
+
+if [ $? = 1 ]; then
+        zenity --info --text "Instalación cancelada." 
+        return 1
+else
+        return 0
+fi

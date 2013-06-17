@@ -1,0 +1,14 @@
+[connection]
+id=AP020
+uuid=1cbbc6de-6bc6-4003-9ba3-f97ae2cf0a24
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=AP020
+mode=infrastructure
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

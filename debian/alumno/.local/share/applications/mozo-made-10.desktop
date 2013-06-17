@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
+Name[es_AR]=Internet sin discriminación
+Exec=chromium %u media/DATOS/Contenidos/internet.inadi.gob.ar.ar/index.html
+Name=Internet sin discriminación
+Icon=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png

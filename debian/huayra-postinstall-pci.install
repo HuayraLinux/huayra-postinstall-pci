@@ -1,1 +1,3 @@
 postinstall.d/ usr/share/huayra/
+APs/ usr/share/huayra-postinstall-pci/
+alumno/ usr/share/huayra-postinstall-pci/

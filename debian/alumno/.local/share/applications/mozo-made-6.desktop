@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
+Exec=chromium %u /media/DATOS/Contenidos/educacion-vial/vial.html
+Name[es_AR]=Educación vial
+Name=Educación vial
+Icon=chromium

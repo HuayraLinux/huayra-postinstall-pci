@@ -1,0 +1,16 @@
+[connection]
+id=AP005
+uuid=ddca5923-04fe-43a7-b9ba-8457cecdaeef
+type=802-11-wireless
+autoconnect=false
+
+[802-11-wireless]
+ssid=AP005
+mode=infrastructure
+
+[ipv6]
+method=auto
+ip6-privacy=2
+
+[ipv4]
+method=shared

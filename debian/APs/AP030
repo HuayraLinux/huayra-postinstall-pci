@@ -1,0 +1,14 @@
+[connection]
+id=AP030
+uuid=c6c7ccc0-3543-47e0-bf71-d48cab8e28d3
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=AP030
+mode=infrastructure
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

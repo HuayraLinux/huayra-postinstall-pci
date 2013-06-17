@@ -6,8 +6,20 @@ else
   echo "No existe /etc/grub.d/30_os-prober"
 fi
 
-echo "" >> /etc/grub.d/40_
+echo "
+#!/bin/sh
+exec tail -n +3 $0
+### BEGIN Recuperacion ###
+   menuentry "Sistema de recuperación" --class gnu-linux --class gnu --class os {
+     insmod part_msdos
+     insmod ext2
+     set root='(hd0,msdos5)'
+     search --no-floppy --fs-uuid --set=root 4a5d9a51-a26c-4d36-a500-bc3e6372cfb8
+     linux /vmlinuz root=/dev/sda5
+     initrd /initrd.img
+   }
+### END Recuperacion ###" >> /etc/grub.d/40_conig-recovery
 
-chmod +x /etc/grub.d/40_
+chmod +x /etc/grub.d/40_conig-recovery
 
 update-grub

@@ -1,8 +1,9 @@
-huayra-postinstall-pci (0.4) UNRELEASED; urgency=low
+huayra-postinstall-pci (0.5) UNRELEASED; urgency=low
 
   * Initial release. 
   * readme y debian/
   * primeros scripts
   * agregue scripts de grub, links de directorios de home y otros
+  * todos los scripts y datos subidos
 
- -- Julia Palandri <julia.palandri@gmail.com>  Mon, 17 Jun 2013 08:18:35 -0300
+ -- Julia Palandri <julia.palandri@gmail.com>  Mon, 17 Jun 2013 15:46:17 -0300

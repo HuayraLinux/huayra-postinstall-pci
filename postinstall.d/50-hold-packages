@@ -1,8 +1,11 @@
 #!/bin/bash
 
-echo "intel-pvr-kernel-dkms hold" |dpkg --set-selections
-echo "linux-headers-3.2.0-4-686-pae hold" |dpkg --set-selections
-echo "linux-headers-3.2.0-4-common hold" |dpkg --set-selections
-echo "linux-image-3.2.0-4-686-pae hold" |dpkg --set-selections
-echo "linux-image-686-pae hold" |dpkg --set-selections
+dpkg -l | grep intel-pvr-kernel-dkms
 
+if [ $? -eq 0 ]; then
+        echo "intel-pvr-kernel-dkms hold" |dpkg --set-selections
+        echo "linux-headers-3.2.0-4-686-pae hold" |dpkg --set-selections
+        echo "linux-headers-3.2.0-4-common hold" |dpkg --set-selections
+        echo "linux-image-3.2.0-4-686-pae hold" |dpkg --set-selections
+        echo "linux-image-686-pae hold" |dpkg --set-selections
+fi

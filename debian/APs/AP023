@@ -1,0 +1,14 @@
+[connection]
+id=AP023
+uuid=438bbe3f-8287-4cf9-915d-c26dcb47595b
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=AP023
+mode=infrastructure
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

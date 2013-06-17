@@ -1,0 +1,3 @@
+#!/bin/bash
+
+cp /usr/share/huayra-postinstall-pci/APs/* /etc/NetworkManager/system-connections/

@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
+Name[es_AR]=Seguridad en internet
+Exec=chromium %u "/media/DATOS/Contenidos/tics-unicef/uso-responsable-tics.html"
+Name=Seguridad en internet
+Icon=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png

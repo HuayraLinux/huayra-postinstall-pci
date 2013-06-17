@@ -1,0 +1,14 @@
+[connection]
+id=AP038
+uuid=a4501a13-5d31-454c-847d-697aa2a7700b
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=AP038
+mode=infrastructure
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

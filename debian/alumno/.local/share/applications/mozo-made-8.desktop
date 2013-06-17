@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
+Name[es_AR]=Guía Universitaria
+Exec=chromium %u  /media/DATOS/Contenidos/guia-universitaria-2012/guia-universitaria-2012.html
+Name=Guía Universitaria
+Icon=chromium

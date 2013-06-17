@@ -1,0 +1,14 @@
+[connection]
+id=AP015
+uuid=829e2330-8d07-447d-9827-797089f1baa9
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=AP015
+mode=infrastructure
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

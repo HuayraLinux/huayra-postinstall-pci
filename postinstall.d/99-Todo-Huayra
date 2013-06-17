@@ -1,0 +1,4 @@
+#!/bin/bash
+
+zenity --info --text "El paquete terminó de configurar su netbook. Por favor reinicie la computadora para que los cambios surtan efecto"
+exit 0

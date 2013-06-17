@@ -1,0 +1,14 @@
+[connection]
+id=AP017
+uuid=dc0b4b4c-e4c9-401c-b764-849a3e03a71f
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=AP017
+mode=infrastructure
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto

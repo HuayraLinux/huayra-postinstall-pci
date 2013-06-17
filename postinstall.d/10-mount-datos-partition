@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+if [ ! -f /etc/fstab ]; then
+        zenity --info --text "No existe /etc/fstab"
+        exit 1
+fi
+
+if ! command -v blkid > /dev/null ; then
+        zenity --info --text "No existe blkid"
+        exit 1
+fi
+
+#chequear si hay una partición con label=datos y si no salir
+blkid -L DATOS >> /dev/null
+if [ ! $? -eq 0]; then
+        zenity --info --text "No hay una partición con label DATOS"
+        exit 1
+fi
+
+DATOS_UUID=$(blkid $(blkid -L DATOS)|awk '{print $3}' | cut -d '=' -f 2 | sed -e 's/"//g')
+DATOS_DEV=`blkid -L DATOS | head -n 1`
+grep $DATOS_UUID /etc/fstab > /dev/null
+if [ ! $? -eq 0 ]; then
+        grep $DATOS_DEV /etc/fstab > /dev/null
+        if [ ! $? -eq 0 ]; then
+                echo "LABEL=DATOS /media/DATOS vfat errors=remount-ro 0 1" >> etc/fstab
+        fi
+
+fi
+
+if [! -f /media/DATOS]; then
+        mount /media/DATOS
+        zetify --info --text "Se ha montado la partición DATOS"
+fi
+
+

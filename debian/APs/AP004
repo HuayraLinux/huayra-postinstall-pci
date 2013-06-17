@@ -1,0 +1,16 @@
+[connection]
+id=AP004
+uuid=e273fd4c-3339-4d70-b9a7-195558eb90b5
+type=802-11-wireless
+autoconnect=false
+
+[802-11-wireless]
+ssid=AP004
+mode=infrastructure
+
+[ipv6]
+method=auto
+ip6-privacy=2
+
+[ipv4]
+method=shared

@@ -1,0 +1,14 @@
+[connection]
+id=AP039
+uuid=50897ea9-89fc-4c18-96c2-4d9cb891687a
+type=802-11-wireless
+
+[802-11-wireless]
+ssid=AP039
+mode=infrastructure
+
+[ipv6]
+method=auto
+
+[ipv4]
+method=auto
