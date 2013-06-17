@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ -f /etc/grub.d/30_os-prober ]; then
+  sed -i -e 's/    linux)/    linux_disable)/' /etc/grub.d/30_os-prober
+else
+  echo "No existe /etc/grub.d/30_os-prober"
+fi
+
+echo "" >> /etc/grub.d/40_
+
+chmod +x /etc/grub.d/40_
+
+update-grub

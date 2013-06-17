@@ -1,0 +1,23 @@
+#!/bin/bash
+
+if [ ! -f /media/DATOS]; then
+        echo "La partición DATOS no existe o no está montada"
+        exit 0
+fi
+
+if [ -f /home/alumno/Vídeos]; then
+        rm /home/alumno/Vídeos
+fi
+
+for i in [Descargas, Música, Documentos, Imágenes, Videos]; do
+        if [ -f /home/alumno/$i ]; then
+                rm /home/alumno/$i
+        fi;
+done
+
+ln -s /media/DATOS/Mis\ Cosas/Descargas/ Descargas
+ln -s /media/DATOS/Mis\ Cosas/Mi\ música/ Música
+ln -s /media/DATOS/Mis\ Cosas/Mis\ documentos/ Documentos
+ln -s /media/DATOS/Mis\ Cosas/Mis\ imágenes/ Imágenes
+ln -s /media/DATOS/Mis\ Cosas/Mis\ vídeos/ Videos
+

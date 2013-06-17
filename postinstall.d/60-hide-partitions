@@ -1,12 +1,7 @@
 #!/bin/bash
 
-if [ ! -f /etc/udev/rules.d/99-hide-disks.rules ]; then
-        touch /etc/udev/rules.d/99-hide-disks.rules
-fi
-
 echo 'KERNEL=="sda2", ENV{UDISKS_PRESENTATION_HIDE}=1" 
 KERNEL=="sda5", ENV{UDISKS_PRESENTATION_HIDE}=1"' >> /etc/udev/rules.d/99-hide-disks.rules
 
-exit 0
 
 
