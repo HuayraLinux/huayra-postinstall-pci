@@ -1,0 +1,8 @@
+#!/bin/bash
+
+echo "intel-pvr-kernel-dkms hold" |dpkg --set-selections
+echo "linux-headers-3.2.0-4-686-pae hold" |dpkg --set-selections
+echo "linux-headers-3.2.0-4-common hold" |dpkg --set-selections
+echo "linux-image-3.2.0-4-686-pae hold" |dpkg --set-selections
+echo "linux-image-686-pae hold" |dpkg --set-selections
+

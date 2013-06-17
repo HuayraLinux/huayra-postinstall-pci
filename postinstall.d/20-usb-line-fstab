@@ -1,7 +1,7 @@
 #!/bin/bash
 
 if [ -f /etc/fstab ]; then
-  sed -i '/media/usb' /etc/fstab
+  sed -i".backup" '/usb/d' /etc/fstab
 else
   echo "No existe /etc/fstab"
 fi

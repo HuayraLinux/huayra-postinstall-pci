@@ -1,6 +1,7 @@
-huayra-postinstall-pci (0.2) UNRELEASED; urgency=low
+huayra-postinstall-pci (0.3) UNRELEASED; urgency=low
 
   * Initial release. 
   * readme y debian/
+  * primeros scripts
 
- -- Julia Palandri <julia.palandri@gmail.com>  Fri, 14 Jun 2013 21:35:49 -0300
+ -- Julia Palandri <julia.palandri@gmail.com>  Sat, 15 Jun 2013 19:49:41 -0300
