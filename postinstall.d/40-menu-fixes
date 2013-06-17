@@ -1,4 +1,4 @@
 #!/bin/bash
 
-cp -r usr/share/huayra-postinstall-pci/alumno/* /home/alumo/
-cp -r usr/share/huayra-postinstall-pci/alumno/* /etc/skel/
+cp -r /usr/share/huayra-postinstall-pci/alumno/* /home/alumo/
+cp -r /usr/share/huayra-postinstall-pci/alumno/* /etc/skel/

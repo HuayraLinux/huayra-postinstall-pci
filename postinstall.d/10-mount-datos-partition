@@ -18,8 +18,9 @@ if [ ! $? -eq 0]; then
         exit 1
 fi
 
-DATOS_UUID=$(blkid $(blkid -L DATOS)|awk '{print $3}' | cut -d '=' -f 2 | sed -e 's/"//g')
 DATOS_DEV=`blkid -L DATOS | head -n 1`
+DATOS_UUID=`blkid $DATOS_DEV|awk '{print $3}' | cut -d '=' -f 2 | sed -e 's/"//g'`
+
 grep $DATOS_UUID /etc/fstab > /dev/null
 if [ ! $? -eq 0 ]; then
         grep $DATOS_DEV /etc/fstab > /dev/null
@@ -31,7 +32,7 @@ fi
 
 if [! -f /media/DATOS]; then
         mount /media/DATOS
-        zetify --info --text "Se ha montado la partición DATOS"
+        zenity --info --text "Se ha montado la partición DATOS"
 fi
 
 

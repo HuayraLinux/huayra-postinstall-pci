@@ -3,7 +3,7 @@ set -e
 
 if [ "$1" = "configure" ]; then
 
-  run-parts --exit-on-error --report /usr/share/huayra/postinstall.d
+  run-parts --exit-on-error --report /usr/share/huayra-postinstall-pci/postinstall.d
 
   if which update-grub2 >/dev/null 2>&1 ; then
     update-grub
