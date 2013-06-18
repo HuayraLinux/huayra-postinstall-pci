@@ -1,4 +1,4 @@
-postinstall.d/* usr/share/huayra/huayra-postinstall-pci/
-debian/APs/* usr/share/huayra-postinstall-pci/
+postinstall.d/* usr/share/huayra-postinstall-pci/postinstall.d/
+debian/APs/* usr/share/huayra-postinstall-pci/APs/
 debian/alumno/.config/* usr/share/huayra-postinstall-pci/alumno/.config/
 debian/alumno/.local/* usr/share/huayra-postinstall-pci/alumno/.local/
