@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.8) testing; urgency=low
+
+  * cambié returns por exits 
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Tue, 18 Jun 2013 16:09:02 -0300
+
 huayra-postinstall-pci (0.7) testing; urgency=low
 
   * arreglé el install
