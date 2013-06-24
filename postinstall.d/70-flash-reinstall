@@ -1,4 +1,4 @@
 #!/bin/bash
 
-dpkg-reconfigure flashplugin-nonfree
+update-flashplugin-nonfree --install
 

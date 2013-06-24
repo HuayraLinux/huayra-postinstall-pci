@@ -13,7 +13,7 @@ fi
 
 #chequear si hay una partición con label=datos y si no salir
 blkid -L DATOS >> /dev/null
-if [ ! $? -eq 0]; then
+if [ ! $? -eq 0 ]; then
         zenity --info --text "No hay una partición con label DATOS"
         exit 1
 fi
@@ -30,7 +30,7 @@ if [ ! $? -eq 0 ]; then
 
 fi
 
-if [! -f /media/DATOS]; then
+if [ ! -f /media/DATOS ]; then
         mount /media/DATOS
         zenity --info --text "Se ha montado la partición DATOS"
 fi

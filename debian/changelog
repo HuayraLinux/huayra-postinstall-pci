@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.9) testing; urgency=low
+
+  * fixes menores de paths, sintaxis, etc 
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Mon, 24 Jun 2013 13:05:08 -0300
+
 huayra-postinstall-pci (0.8) testing; urgency=low
 
   * cambié returns por exits 
