@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.10) testing; urgency=low
+
+  * agregué /media/DATOS, agregué chequeo para montar, corregí typo 
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Mon, 24 Jun 2013 15:28:10 -0300
+
 huayra-postinstall-pci (0.9) testing; urgency=low
 
   * fixes menores de paths, sintaxis, etc 

@@ -19,20 +19,27 @@ if [ ! $? -eq 0 ]; then
 fi
 
 DATOS_DEV=`blkid -L DATOS | head -n 1`
-DATOS_UUID=`blkid $DATOS_DEV|awk '{print $3}' | cut -d '=' -f 2 | sed -e 's/"//g'`
+if [ $? -eq 0 ]; then
 
-grep $DATOS_UUID /etc/fstab > /dev/null
-if [ ! $? -eq 0 ]; then
-        grep $DATOS_DEV /etc/fstab > /dev/null
-        if [ ! $? -eq 0 ]; then
-                echo "LABEL=DATOS /media/DATOS vfat errors=remount-ro 0 1" >> etc/fstab
-        fi
+    DATOS_UUID=`blkid $DATOS_DEV|awk '{print $3}' | cut -d '=' -f 2 | sed -e 's/"//g'`
 
+
+    grep $DATOS_DEV /etc/fstab > /dev/null
+    if [ ! $? -eq 0 ]; then
+            grep $DATOS_UID /etc/fstab > /dev/null
+            if [ ! $? -eq 0 ]; then
+                grep "LABEL=DATOS" /eta/fstab > /dev/null
+                if [ ! $? -eq 0 ]; then
+                    echo "LABEL=DATOS /media/DATOS vfat errors=remount-ro 0 1" >> etc/fstab
+                fi
+            fi
+
+    fi
+
+    if [ ! -f /media/DATOS ]; then
+            mkdir /media/DATOS
+            mount /media/DATOS
+            zenity --info --text "Se ha montado la partición DATOS"
+    fi
 fi
-
-if [ ! -f /media/DATOS ]; then
-        mount /media/DATOS
-        zenity --info --text "Se ha montado la partición DATOS"
-fi
-
 
