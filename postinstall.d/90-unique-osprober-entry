@@ -1,9 +1,10 @@
 #!/bin/bash
 
 if [ -f /etc/grub.d/30_os-prober ]; then
-  sed -i -e 's/      LINUXPROBED="`linux-boot-prober ${DEVICE} 2> /dev/null | tr ' ' '^' | paste -s -d ' '`"/      LINUXPROBED="`linux-boot-prober ${DEVICE} 2> /dev/null | sort | uniq |tr ' ' '^' | paste -s -d ' '`" /' /etc/grub.d/30_os-prober
+    sed -i -e 's/      LINUXPROBED="`linux-boot-prober ${DEVICE} 2> /dev/null | tr ' ' '^' | paste -s -d ' '`"/      LINUXPROBED="`linux-boot-prober ${DEVICE} 2> /dev/null | sort | uniq |tr ' ' '^' | paste -s -d ' '`" /' /etc/grub.d/30_os-prober
+    echo "Se agregó el filtro unique para el os_prober de grub"
 else
-  echo "No existe /etc/grub.d/30_os-prober"
+    echo "No existe /etc/grub.d/30_os-prober"
 fi
 
 update-grub

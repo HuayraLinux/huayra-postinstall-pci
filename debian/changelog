@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.11) testing; urgency=low
+
+  * Arreglé algunos typos, saqué el apt-get upgrade, agregué unos echo's con info 
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Tue, 25 Jun 2013 15:10:18 -0300
+
 huayra-postinstall-pci (0.10) testing; urgency=low
 
   * agregué /media/DATOS, agregué chequeo para montar, corregí typo 

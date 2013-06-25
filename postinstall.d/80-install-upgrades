@@ -1,5 +1,6 @@
 #!/bin/bash
 
-apt-get update
-apt-get upgrade
-apt-get dist-upgrade
+zenity --info --text "Por favor, busque e instale las actualizaciones disponibles. A través del menú, en Herramientas del sistema -> Actualizaciones de software o, desde una consola, ejecute: 
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get dist-upgrade"

@@ -7,11 +7,13 @@ fi
 
 if [ -f /home/alumno/Vídeos ]; then
         rm /home/alumno/Vídeos
+        echo "Borrando carpeta Vídeos"
 fi
 
 for i in [ Descargas, Música, Documentos, Imágenes, Videos ]; do
         if [ -f /home/alumno/$i ]; then
                 rm /home/alumno/$i
+                echo "Borrando carpeta $i"
         fi;
 done
 
@@ -21,3 +23,4 @@ ln -s "/media/DATOS/Mis\ Cosas/Mis\ documentos/" Documentos
 ln -s "/media/DATOS/Mis\ Cosas/Mis\ imágenes/" Imágenes
 ln -s "/media/DATOS/Mis\ Cosas/Mis\ vídeos/" Videos
 
+echo "Symlinks creados en la carpeta Home del alumno"

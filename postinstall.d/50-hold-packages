@@ -9,3 +9,5 @@ if [ $? -eq 0 ]; then
         echo "linux-image-3.2.0-4-686-pae hold" |dpkg --set-selections
         echo "linux-image-686-pae hold" |dpkg --set-selections
 fi
+
+echo "Reteniendo paquetes de drivers de video"

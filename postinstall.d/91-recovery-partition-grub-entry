@@ -20,6 +20,7 @@ exec tail -n +3 $0
    }
 ### END Recuperacion ###" >> /etc/grub.d/40_conig-recovery
 
+echo "Agregada la partición de recuperación al grub"
 chmod +x /etc/grub.d/40_conig-recovery
 
 update-grub

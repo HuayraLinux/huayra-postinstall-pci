@@ -2,5 +2,7 @@
 
 cp -r /usr/share/huayra-postinstall-pci/alumno/.config/* /home/alumno/.config
 cp -r /usr/share/huayra-postinstall-pci/alumno/.local/* /home/alumno/.local
+echo "Agregando elementos de menú al usuario alumno"
 cp -r /usr/share/huayra-postinstall-pci/alumno/.config/* /etc/skel/.config
 cp -r /usr/share/huayra-postinstall-pci/alumno/.local/* /etc/skel/.local
+echo "Agregando elementos de menú al skel de usuarios"

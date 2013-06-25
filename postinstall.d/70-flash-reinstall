@@ -2,3 +2,4 @@
 
 update-flashplugin-nonfree --install
 
+echo "Instalando plugin de flash"
