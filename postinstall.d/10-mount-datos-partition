@@ -24,13 +24,13 @@ if [ $? -eq 0 ]; then
     DATOS_UUID=`blkid $DATOS_DEV|awk '{print $3}' | cut -d '=' -f 2 | sed -e 's/"//g'`
 
 
-    grep $DATOS_DEV /etc/fstab > /dev/null
+    grep "$DATOS_DEV" /etc/fstab > /dev/null
     if [ ! $? -eq 0 ]; then
-            grep $DATOS_UID /etc/fstab > /dev/null
+            grep "$DATOS_UUID" /etc/fstab > /dev/null
             if [ ! $? -eq 0 ]; then
                 grep "LABEL=DATOS" /etc/fstab > /dev/null
                 if [ ! $? -eq 0 ]; then
-                    echo "LABEL=DATOS /media/DATOS vfat errors=remount-ro 0 1" >> etc/fstab
+                    echo "LABEL=DATOS /media/DATOS vfat errors=remount-ro 0 1" >> /etc/fstab
                     echo "Se agregó la partición de DATOS a /etc/fstab"
                 fi
             fi
@@ -38,7 +38,7 @@ if [ $? -eq 0 ]; then
     fi
 
     if [ ! -f /media/DATOS ]; then
-            mkdir /media/DATOS
+            mkdir -p /media/DATOS
             mount /media/DATOS
             echo "Se ha montado la partición DATOS"
     fi

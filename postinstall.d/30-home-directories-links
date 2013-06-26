@@ -1,26 +1,27 @@
 #!/bin/bash
 
-if [ ! -f /media/DATOS ]; then
+if [ ! -e /media/DATOS ]; then
         echo "La partición DATOS no existe o no está montada"
         exit 0
 fi
 
-if [ -f /home/alumno/Vídeos ]; then
-        rm /home/alumno/Vídeos
+if [ -e /home/alumno/Vídeos ]; then
+        rm -rf /home/alumno/Vídeos
         echo "Borrando carpeta Vídeos"
 fi
 
-for i in [ Descargas, Música, Documentos, Imágenes, Videos ]; do
-        if [ -f /home/alumno/$i ]; then
-                rm /home/alumno/$i
+for i in Descargas Música Documentos Imágenes Videos; do
+        if [ -e /home/alumno/$i ]; then
+                rm -rf /home/alumno/$i
                 echo "Borrando carpeta $i"
         fi;
 done
 
-ln -s "/media/DATOS/Mis\ Cosas/Descargas/" Descargas
-ln -s "/media/DATOS/Mis\ Cosas/Mi\ música/" Música
-ln -s "/media/DATOS/Mis\ Cosas/Mis\ documentos/" Documentos
-ln -s "/media/DATOS/Mis\ Cosas/Mis\ imágenes/" Imágenes
-ln -s "/media/DATOS/Mis\ Cosas/Mis\ vídeos/" Videos
+ln -s "/media/DATOS/Mis\ Cosas/Descargas/" /home/alumno/Descargas
+ln -s "/media/DATOS/Mis\ Cosas/Mi\ música/" /home/alumno/Música
+ln -s "/media/DATOS/Mis\ Cosas/Mis\ documentos/" /home/alumno/Documentos
+ln -s "/media/DATOS/Mis\ Cosas/Mis\ imágenes/" /home/alumno/Imágenes
+ln -s "/media/DATOS/Mis\ Cosas/Mis\ vídeos/" /home/alumno/Videos
+chown -R alumno:alumno /home/alumno/Descargas /home/alumno/Música /home/alumno/Documentos /home/alumno/Imágenes /home/alumno/Videos
 
 echo "Symlinks creados en la carpeta Home del alumno"

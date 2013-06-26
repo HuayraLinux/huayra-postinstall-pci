@@ -8,7 +8,7 @@ fi
 
 echo "
 #!/bin/sh
-exec tail -n +3 $0
+exec tail -n +3 \$0
 ### BEGIN Recuperacion ###
    menuentry "Sistema de recuperación" --class gnu-linux --class gnu --class os {
      insmod part_msdos

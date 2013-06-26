@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.12) testing; urgency=low
+
+  * varios bugfixes, typos, permisos 
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Wed, 26 Jun 2013 17:40:24 -0300
+
 huayra-postinstall-pci (0.11) testing; urgency=low
 
   * Arreglé algunos typos, saqué el apt-get upgrade, agregué unos echo's con info 
