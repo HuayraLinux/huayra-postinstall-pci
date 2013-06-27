@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.13) testing; urgency=low
+
+  * cambié los paths de los directorios para symlinkear en el Home
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Thu, 27 Jun 2013 15:12:50 -0300
+
 huayra-postinstall-pci (0.12) testing; urgency=low
 
   * varios bugfixes, typos, permisos 

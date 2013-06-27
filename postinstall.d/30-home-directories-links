@@ -17,11 +17,11 @@ for i in Descargas Música Documentos Imágenes Videos; do
         fi;
 done
 
-ln -s "/media/DATOS/Mis\ Cosas/Descargas/" /home/alumno/Descargas
-ln -s "/media/DATOS/Mis\ Cosas/Mi\ música/" /home/alumno/Música
-ln -s "/media/DATOS/Mis\ Cosas/Mis\ documentos/" /home/alumno/Documentos
-ln -s "/media/DATOS/Mis\ Cosas/Mis\ imágenes/" /home/alumno/Imágenes
-ln -s "/media/DATOS/Mis\ Cosas/Mis\ vídeos/" /home/alumno/Videos
+ln -s "/media/DATOS/Mis Cosas/Descargas/" /home/alumno/Descargas
+ln -s "/media/DATOS/Mis Cosas/Mi música/" /home/alumno/Música
+ln -s "/media/DATOS/Mis Cosas/Mis documentos/" /home/alumno/Documentos
+ln -s "/media/DATOS/Mis Cosas/Mis imágenes/" /home/alumno/Imágenes
+ln -s "/media/DATOS/Mis Cosas/Mis vídeos/" /home/alumno/Videos
 chown -R alumno:alumno /home/alumno/Descargas /home/alumno/Música /home/alumno/Documentos /home/alumno/Imágenes /home/alumno/Videos
 
 echo "Symlinks creados en la carpeta Home del alumno"
