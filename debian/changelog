@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.14) testing; urgency=low
+
+  * agregué opción umask para montar DATOS, saqué opción de sed, agregué chequeo de existencia de archivo 
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Mon, 01 Jul 2013 15:37:49 -0300
+
 huayra-postinstall-pci (0.13) testing; urgency=low
 
   * cambié los paths de los directorios para symlinkear en el Home

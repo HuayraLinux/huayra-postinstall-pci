@@ -30,7 +30,7 @@ if [ $? -eq 0 ]; then
             if [ ! $? -eq 0 ]; then
                 grep "LABEL=DATOS" /etc/fstab > /dev/null
                 if [ ! $? -eq 0 ]; then
-                    echo "LABEL=DATOS /media/DATOS vfat errors=remount-ro 0 1" >> /etc/fstab
+                    echo "LABEL=DATOS /media/DATOS vfat defaults,umask=0,errors=remount-ro 0 1" >> /etc/fstab
                     echo "Se agregó la partición de DATOS a /etc/fstab"
                 fi
             fi
