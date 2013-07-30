@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.15) testing; urgency=low
+
+  * Cambié todos los APs por aps porque un vendedor se quejaba de que no funcionaban con mayúscula. 
+
+ -- Julia Palandri <julia.palandri@gmail.com>  Tue, 30 Jul 2013 14:23:21 -0300
+
 huayra-postinstall-pci (0.14) testing; urgency=low
 
   * agregué opción umask para montar DATOS, saqué opción de sed, agregué chequeo de existencia de archivo 
