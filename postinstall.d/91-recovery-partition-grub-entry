@@ -10,7 +10,7 @@ echo "
 #!/bin/sh
 exec tail -n +3 \$0
 ### BEGIN Recuperacion ###
-   menuentry "Sistema de recuperación" --class gnu-linux --class gnu --class os {
+   menuentry \"Sistema de recuperación\" --class gnu-linux --class gnu --class os {
      insmod part_msdos
      insmod ext2
      set root='(hd0,msdos5)'
@@ -18,7 +18,7 @@ exec tail -n +3 \$0
      linux /vmlinuz root=/dev/sda5
      initrd /initrd.img
    }
-### END Recuperacion ###" >> /etc/grub.d/40_conig-recovery
+### END Recuperacion ###" > /etc/grub.d/40_conig-recovery
 
 echo "Agregada la partición de recuperación al grub"
 chmod +x /etc/grub.d/40_conig-recovery
