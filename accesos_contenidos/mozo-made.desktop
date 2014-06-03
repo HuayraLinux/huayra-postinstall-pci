@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=applications-accessibility
+Name[es_AR]=Escritorio Modalidad Especial
+Exec=chromium /media/RECURSOS/EscritorioModalidadEspecial-vreducida/index.html
+Comment[es_AR]=Escritorio Modalidad Especial
+Name=Escritorio Modalidad Especial
+Comment=Escritorio Modalidad Especial
+Icon=applications-accessibility

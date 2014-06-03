@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=vlc
+Name[es_AR]=Medialuna 1
+Comment[es_AR]=Medialuna - El Eclipse
+Exec=vlc "/media/RECURSOS/videos/pakapaka/medialuna y las noches mágicas. el eclipse.mp4"
+Name=Medialuna 1
+Comment=Medialuna - El Eclipse
+Icon=vlc

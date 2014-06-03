@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=vlc
+Exec=vlc "/media/RECURSOS/videos/pakapaka/zamba en la casa de sarmiento.mp4"
+Name[es_AR]=Zamba en la casa de Sarmiento
+Comment[es_AR]=Zamba en la casa de Sarmiento
+Name=Zamba en la casa de Sarmiento
+Comment=Zamba en la casa de Sarmiento
+Icon=vlc

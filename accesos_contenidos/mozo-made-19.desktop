@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=vlc
+Name[es_AR]=Zamba en la casa de Tucumán
+Comment[es_AR]=Zamba en la casa de Tucumán
+Exec=vlc "/media/RECURSOS/videos/pakapaka/zamba en la casa de tucumán.mp4"
+Name=Zamba en la casa de Tucumán
+Comment=Zamba en la casa de Tucumán
+Icon=vlc

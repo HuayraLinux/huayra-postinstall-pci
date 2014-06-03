@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=preferences-desktop-locale
+Name[es_AR]=Voces del Bicentenario
+Comment[es_AR]=Voces del Bicentenario
+Exec=chromium /media/RECURSOS/MultiplesVocesparaelBicentenario/voces_local2/index.html
+Name=Voces del Bicentenario
+Comment=Voces del Bicentenario
+Icon=chromium

@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=vlc
+Exec=vlc "/media/RECURSOS/videos/pakapaka/medialuna y las noches mágicas. el cumpleaños de medialuna.mp4"
+Name[es_AR]=Medialuna 2
+Comment[es_AR]=El cumpleaños de medialuna
+Name=Medialuna 2
+Comment=El cumpleaños de medialuna
+Icon=vlc

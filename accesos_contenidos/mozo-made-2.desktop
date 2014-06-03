@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=vlc
+Name[es_AR]=Animapaka 1
+Exec=vlc /media/RECURSOS/Videos/PakaPaka/animapaka.mp4
+Comment[es_AR]=Animapaka 1
+Name=Animapaka 1
+Comment=Animapaka 1
+Icon=vlc

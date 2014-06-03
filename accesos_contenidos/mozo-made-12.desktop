@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=vlc
+Name[es_AR]=Alterados por Pi
+Exec=vlc /media/RECURSOS/Videos/Encuentro/APTO\\ PA-PP-35911.mp4
+Comment[es_AR]=Alterados por Pi
+Name=Alterados por Pi
+Comment=Alterados por Pi
+Icon=vlc

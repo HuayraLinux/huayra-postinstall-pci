@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=preferences-desktop-locale
+Name[es_AR]=30 años de democracia
+Comment[es_AR]=30 años de democracia
+Exec=chromium /media/RECURSOS/Coleccion30-aniosdemocracia/Datos/coleccion30anios.html
+Name=30 años de democracia
+Comment=30 años de democracia
+Icon=preferences-desktop-locale

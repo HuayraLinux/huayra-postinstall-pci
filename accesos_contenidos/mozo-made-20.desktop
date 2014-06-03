@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=chromium
+Exec=chromium "/media/RECURSOS/AprenderIngles/INDEX.HTM"
+Name[es_AR]=Aprender Inglés
+Comment[es_AR]=Aprender Inglés
+Name=Aprender Inglés
+Comment=Aprender Inglés
+Icon=chromium
