@@ -1,10 +1,12 @@
-#!/usr/bin/env xdg-open
 [Desktop Entry]
-Version=1.0
-Type=Application
+Comment=Aprender Inglés
+Comment[es_AR]=Aprender Inglés
+Exec=chromium /media/RECURSOS/AprenderIngles/INDEX.HTM
+Hidden=true
+Icon=chromium
+Icon[es_AR]=chromium
+Name=Aprender Inglés
+Name[es_AR]=Aprender Inglés
 Terminal=false
-Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.rn-realmedia.png
-Name[es_AR]=Navegá protegido
-Exec=chromium %u "/media/DATOS/Contenidos/Navega Protegido/InternetSegura.swf"
-Name=Navegá protegido
-Icon=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.rn-realmedia.png
+Type=Application
+Version=1.0

@@ -4,8 +4,10 @@
 Version=1.0
 Type=Application
 Terminal=false
-Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
-Name[es_AR]=Escritorio Alumno
-Exec=chromium %u /media/DATOS/escritorioalumnos/index.html
-Name=Escritorio Alumno
-Icon=mate-panel-launcher
+Icon[es_AR]=vlc
+Name[es_AR]=El informe Kliksberg
+Exec=xdg-open /media/RECURSOS/Videos/InformeKliksberg
+Comment[es_AR]=El informe Kliksberg
+Name=El informe Kliksberg
+Comment=El informe Kliksberg
+Icon=vlc

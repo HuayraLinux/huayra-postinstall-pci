@@ -1,10 +1,13 @@
 #!/usr/bin/env xdg-open
+
 [Desktop Entry]
 Version=1.0
 Type=Application
 Terminal=false
-Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/html.png
-Name[es_AR]=Mi primer trabajo
-Exec=chromium %u "/media/DATOS/Contenidos/La Seguridad Social y Vos/folleto.anses/index.html"
-Name=Mi primer trabajo
-Icon=/usr/share/icons/gnome/48x48/mimetypes/html.png
+Icon[es_AR]=preferences-desktop-locale
+Name[es_AR]=Voces del Bicentenario
+Comment[es_AR]=Voces del Bicentenario
+Exec=chromium /media/RECURSOS/MultiplesVocesparaelBicentenario/voces_local2/index.html
+Name=Voces del Bicentenario
+Comment=Voces del Bicentenario
+Icon=chromium

@@ -3,8 +3,10 @@
 Version=1.0
 Type=Application
 Terminal=false
-Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
-Name[es_AR]=British Council
-Exec=chromium %u "/media/DATOS/Contenidos/british_council/INDEX.HTM"
-Name=British Council
-Icon=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.oasis.opendocument.text-web.png
+Icon[es_AR]=vlc
+Name[es_AR]=Zamba en Yapeyú 2
+Comment[es_AR]=Zamba en Yapeyú 2
+Exec=vlc "/media/RECURSOS/videos/pakapaka/zamba en yapeyú parte 2.mp4"
+Name=Zamba en Yapeyú 2
+Comment=Zamba en Yapeyú 2
+Icon=vlc
