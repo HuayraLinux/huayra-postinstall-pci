@@ -1,10 +1,13 @@
+#!/usr/bin/env xdg-open
+
 [Desktop Entry]
-Exec=vlc %f /media/DATOS/Contenidos/Con vos en la web.mp4
-Hidden=true
-Icon=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.rn-realmedia.png
-Icon[es_AR]=/usr/share/icons/gnome/48x48/mimetypes/gnome-mime-application-vnd.rn-realmedia.png
-Name=Con vos en la web
-Name[es_AR]=Con vos en la web
-Terminal=false
-Type=Application
 Version=1.0
+Type=Application
+Terminal=false
+Icon[es_AR]=vlc
+Name[es_AR]=Encuentro
+Exec=xdg-open /media/RECURSOS/Videos/Encuentro
+Comment[es_AR]=Videos Encuentro
+Name=Encuentro
+Comment=Videos Encuentro
+Icon=vlc
