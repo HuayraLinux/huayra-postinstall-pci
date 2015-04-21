@@ -1,0 +1,23 @@
+#!/bin/bash
+
+scripts=$(dirname $(readlink -f $0))
+
+usage() { echo "Usage: $0 run | test" 1>&2; exit 1; }
+
+while getopts "--long run" o; do
+    case "${o}" in
+        --run)
+            echo "run"
+            ;;
+        --test)
+            echo "test"
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+shift $((OPTIND-1))
+run-parts --report $scripts/../share/huayra-postinstall-pci/2014.d -a $1
+
+

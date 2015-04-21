@@ -1,0 +1,34 @@
+#!/bin/bash
+
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
+
+read -r -d '' TEXT << EOM
+Esta aplicación instalará configuraciones pensadas *solamente* para las
+netbooks del Programa Conectar Igualdad.
+
+AVISO: Si ésta computadora no es del Programa, se podrían perder datos o algunas
+aplicaciones podrían dejar de funcionar.
+
+¿Desea continuar con la instalación?
+EOM
+
+case "$1" in
+  run)
+
+    sudo -A zenity --question --text="$TEXT" $USER
+
+    if [ $? = 1 ]; then
+      sudo -A zenity --info --text "Instalación cancelada."
+      exit 1
+    fi
+    ;;
+  test)
+    echo "Este script no tiene tests"
+    ;;
+  *)
+    echo "Usage: /etc/init.d/atd {start|stop|restart|force-reload|status}"
+    exit 1
+    ;;
+esac

@@ -1,7 +1,7 @@
 Source: huayra-postinstall-pci
 Section: system
 Priority: extra
-Maintainer: Julia Palandri <julia.palandri@gmail.com>
+Maintainer: Fernando Toledo <ragnarok@docksud.com.ar>
 Build-Depends: debhelper (>= 8.0.0)
 Standards-Version: 3.9.3
 Homepage: http://huayra.conectarigualdad.gob.ar
@@ -10,5 +10,8 @@ Package: huayra-postinstall-pci
 Architecture: all
 Depends: ${misc:Depends}
 Description: Configuraciones para netbooks del PCI con Huayra recién instalado
- Este paquete contiene scripts para configurar la netbook y dejarla lista para el uso escolar.
+ Este paquete contiene scripts para configurar la netbook y dejarla lista
+ para el uso escolar.
+ NO debería aplicarse en una computadora que no tenga una estructura de
+ particiones original de Conectar Igualdad.
 
