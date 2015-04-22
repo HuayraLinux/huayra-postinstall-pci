@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.17) unstable; urgency=medium
+
+  * bump version
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 22 Apr 2015 20:00:13 -0300
+
 huayra-postinstall-pci (0.16) unstable; urgency=medium
 
   * Reorganiando el paquete y preparacion para imagen 2014
