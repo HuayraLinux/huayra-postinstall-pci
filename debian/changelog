@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.18) unstable; urgency=medium
+
+  * Quitando postintall del paquete
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 22 Apr 2015 20:08:24 -0300
+
 huayra-postinstall-pci (0.17) unstable; urgency=medium
 
   * bump version
