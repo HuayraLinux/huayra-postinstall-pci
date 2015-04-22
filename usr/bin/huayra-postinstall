@@ -2,22 +2,26 @@
 
 scripts=$(dirname $(readlink -f $0))
 
-usage() { echo "Usage: $0 run | test" 1>&2; exit 1; }
+usage() { echo "Usage: $0 -r | -t" 1>&2; exit 1; }
 
-while getopts "--long run" o; do
+cmd=""
+while getopts ":rt" o; do
     case "${o}" in
-        --run)
+    	r)
             echo "run"
+	    cmd="run"
             ;;
-        --test)
+        t)
             echo "test"
+	    cmd="test"
             ;;
-        *)
+	*)
             usage
             ;;
     esac
 done
+if [ -z "$cmd" ] ; then
+    usage
+fi
 shift $((OPTIND-1))
-run-parts --report $scripts/../share/huayra-postinstall-pci/2014.d -a $1
-
-
+run-parts --report --exit-on-error $scripts/../share/huayra-postinstall-pci/2014.d -a $cmd

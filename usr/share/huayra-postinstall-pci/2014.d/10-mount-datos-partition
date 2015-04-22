@@ -1,0 +1,56 @@
+#!/bin/bash
+
+
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
+case "$1" in
+  run)
+
+    log_info "Crear puntos de montaje si no existen"
+    sudo -A mkdir -p /media/DATOS
+    sudo -A mkdir -p /media/RECURSOS
+
+    log_info "Backup del fstab"
+    sudo -A cp /etc/fstab /var/backups/fstab.bak.10
+
+    log_info "Agregando entradas al fstab"
+    sudo -A sh -c 'echo "LABEL=DATOS /media/DATOS lowntfs-3g defaults,ignore_case,dmask=002,fmask=113,gid=users 0 0" >> /etc/fstab'
+    sudo -A sh -c 'echo "LABEL=RECURSOS /media/RECURSOS lowntfs-3g defaults,ignore_case,dmask=002,fmask=113,gid=users,ro 0 0" >> /etc/fstab'
+
+    log_info "Montar las particiones"
+    sudo -A mount -a
+    ;;
+
+  test)
+    if [ ! -f /etc/fstab ]; then
+      log_error "No existe /etc/fstab"
+    fi
+
+    sudo -A sh -c 'blkid -L DATOS >> /dev/null'
+    if [ ! $? -eq 0 ]; then
+      log_error "No hay una partición con label DATOS"
+    fi
+    sudo -A sh -c 'blkid -L RECURSOS >> /dev/null'
+    if [ ! $? -eq 0 ]; then
+      log_error "No hay una partición con label RECURSOS"
+    fi
+
+    if [ ! -d /media/DATOS ]; then
+      log_warn "no existe el directorio /media/DATOS pero va a crearse"
+    fi
+    if [ ! -d /media/RECURSOS ]; then
+      log_warn "no existe el directorio /media/RECURSOS pero va a crearse"
+    fi
+    ;;
+
+  *)
+    echo "Uso: $0 [run | test ]"
+    exit 1
+    ;;
+esac
+
+exit 0
+
+
+

@@ -17,18 +17,19 @@ EOM
 case "$1" in
   run)
 
-    sudo -A zenity --question --text="$TEXT" $USER
+    zenity --question --text="$TEXT" $USER
 
     if [ $? = 1 ]; then
-      sudo -A zenity --info --text "Instalación cancelada."
+      zenity --info --text "Instalación cancelada."
       exit 1
     fi
     ;;
   test)
-    echo "Este script no tiene tests"
+    echo "prueba de sudo"
+    sudo -A zenity --info --text "Mensaje de prueba como superusuario"
     ;;
   *)
-    echo "Usage: /etc/init.d/atd {start|stop|restart|force-reload|status}"
+    echo "Uso: $0 [run | test ]"
     exit 1
     ;;
 esac

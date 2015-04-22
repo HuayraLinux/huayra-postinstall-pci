@@ -1,0 +1,44 @@
+#!/bin/bash
+
+
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
+read -r -d '' PREGUNTA << EOM
+Este paso elimina los directorios de documentos actuales del home del usuario $USERNAME
+y genera los enlaces simbólicos a la particion de DATOS.
+
+AVISO: Si contiene datos actualmente, cancele esta operación y muévalos a
+/mnt/DATOS/usuarios/$USERNAME
+
+¿Desea continuar con esta operación?
+EOM
+
+case "$1" in
+  run)
+    zenity --question --text="$PREGUNTA"
+    for i in Compartido Descargas Música Documentos Imágenes Videos; do
+      if [ -e $HOME/$i ]; then
+        log_info "Borrando carpeta $i"
+        rm -rf "$HOME/$i"
+        log_info "Creando symlinks"
+        ln -s "/media/DATOS/usuarios/$USERNAME/$i/" "$HOME/$i"
+      fi;
+    done
+
+    if [ $? = 1 ]; then
+      zenity --info --text "Instalación cancelada."
+      exit 1
+    fi
+    ;;
+  test)
+    log_info "Comprobando particion de DATOS"
+    if [ ! -e /media/DATOS ]; then
+            log_error "La partición DATOS no existe o no está montada"
+    fi
+    ;;
+  *)
+    echo "Uso: $0 [ run | test ]"
+    exit 1
+    ;;
+esac

@@ -19,7 +19,7 @@
 #               /__I.' !                  .' !
 #                   /__I                  /__I   fsc
 #
-# incluir este archivo en los scripts:  
+# incluir este archivo en los scripts:
 # common=$(dirname $(readlink -f $0))
 # source $common/../postinstall-common
 #
@@ -29,3 +29,15 @@
 # como root, se debe usar sudo -A y se usa gnome-ask-pass para
 # preguntar el password
 export SUDO_ASKPASS=/usr/lib/openssh/gnome-ssh-askpass
+
+function log_error() {
+  echo "ERROR: $1"
+}
+
+function log_info() {
+  echo "INFO: $1"
+}
+
+function log_warn() {
+  echo "AVISO: $1"
+}
