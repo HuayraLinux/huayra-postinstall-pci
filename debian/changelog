@@ -1,3 +1,10 @@
+huayra-postinstall-pci (0.19) UNRELEASED; urgency=medium
+
+  * correccion de pruebas
+  * correccion de dependencia de zenity
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 22 Apr 2015 20:39:41 -0300
+
 huayra-postinstall-pci (0.18) unstable; urgency=medium
 
   * Quitando postintall del paquete

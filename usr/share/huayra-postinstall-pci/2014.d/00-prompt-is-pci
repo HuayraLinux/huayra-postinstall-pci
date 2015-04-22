@@ -14,22 +14,9 @@ aplicaciones podrían dejar de funcionar.
 ¿Desea continuar con la instalación?
 EOM
 
-case "$1" in
-  run)
+zenity --question --text="$TEXT" $USER
 
-    zenity --question --text="$TEXT" $USER
-
-    if [ $? = 1 ]; then
-      zenity --info --text "Instalación cancelada."
-      exit 1
-    fi
-    ;;
-  test)
-    echo "prueba de sudo"
-    sudo -A zenity --info --text "Mensaje de prueba como superusuario"
-    ;;
-  *)
-    echo "Uso: $0 [run | test ]"
-    exit 1
-    ;;
-esac
+if [ $? = 1 ]; then
+  zenity --info --text "Instalación cancelada."
+  exit 1
+fi

@@ -8,7 +8,7 @@ Homepage: http://huayra.conectarigualdad.gob.ar
 
 Package: huayra-postinstall-pci
 Architecture: all
-Depends: ${misc:Depends},util-linux,enity, ssh-askpass-gnome
+Depends: ${misc:Depends}, util-linux, zenity, ssh-askpass-gnome
 Description: Configuraciones para netbooks del PCI con Huayra recién instalado
  Este paquete contiene scripts para configurar la netbook y dejarla lista
  para el uso escolar.

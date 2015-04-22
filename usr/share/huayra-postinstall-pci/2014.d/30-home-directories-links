@@ -14,31 +14,26 @@ AVISO: Si contiene datos actualmente, cancele esta operación y muévalos a
 ¿Desea continuar con esta operación?
 EOM
 
-case "$1" in
-  run)
-    zenity --question --text="$PREGUNTA"
-    for i in Compartido Descargas Música Documentos Imágenes Videos; do
-      if [ -e $HOME/$i ]; then
-        log_info "Borrando carpeta $i"
-        rm -rf "$HOME/$i"
-        log_info "Creando symlinks"
-        ln -s "/media/DATOS/usuarios/$USERNAME/$i/" "$HOME/$i"
-      fi;
-    done
+zenity --question --text="$PREGUNTA"
+if [ $? = 1 ]; then
+  zenity --info --text "Instalación cancelada."
+  exit 1
+fi
 
-    if [ $? = 1 ]; then
-      zenity --info --text "Instalación cancelada."
-      exit 1
+for i in Compartido Descargas Música Documentos Imágenes Videos; do
+  if [ -e $HOME/$i ]; then
+    log_info "Borrando carpeta $i"
+    if [ "$1" = "run" ]; then
+      rm -rf "$HOME/$i"
+    else
+      log_info "rm -rf \"$HOME/$i\""
     fi
-    ;;
-  test)
-    log_info "Comprobando particion de DATOS"
-    if [ ! -e /media/DATOS ]; then
-            log_error "La partición DATOS no existe o no está montada"
+
+    log_info "Creando symlinks"
+    if [ "$1" = "run" ]; then
+      ln -s "/media/DATOS/usuarios/$USERNAME/$i/" "$HOME/$i"
+    else
+      log_info "ln -s \"/media/DATOS/usuarios/$USERNAME/$i/\" \"$HOME/$i\""
     fi
-    ;;
-  *)
-    echo "Uso: $0 [ run | test ]"
-    exit 1
-    ;;
-esac
+  fi;
+done
