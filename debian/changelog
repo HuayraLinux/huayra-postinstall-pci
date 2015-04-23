@@ -1,3 +1,9 @@
+huayra-postinstall-pci (0.22) unstable; urgency=medium
+
+  * version .22 con correcciones varias 
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Thu, 23 Apr 2015 00:18:10 -0300
+
 huayra-postinstall-pci (0.21) unstable; urgency=medium
 
   * se agregan varios scripts mas:
