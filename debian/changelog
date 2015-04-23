@@ -1,3 +1,11 @@
+huayra-postinstall-pci (0.21) unstable; urgency=medium
+
+  * se agregan varios scripts mas:
+    * para marblepoint
+    * hide-partitions
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 22 Apr 2015 23:00:23 -0300
+
 huayra-postinstall-pci (0.20) unstable; urgency=medium
 
   * Correcciones para lintian!

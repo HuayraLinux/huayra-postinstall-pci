@@ -3,8 +3,12 @@ common=$(dirname $(readlink -f $0))
 source $common/../postinstall-common
 
 read -r -d '' TEXT << EOM
-El paquete terminó de configurar su netbook. 
-Por favor reinicie la computadora para que los cambios tengan efecto
+El paquete terminó de configurar su netbook.
+Por favor reinicie la computadora para que los cambios tengan efecto.
+
+Si encontró algun error en el proceso, por favor envíe un reporte en:
+
+<b>http://bugs.huayra.conectarigualdad.gob.ar</b>
 EOM
 
 zenity --info --text "$TEXT"
