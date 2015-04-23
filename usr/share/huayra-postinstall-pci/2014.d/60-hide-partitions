@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ ! -f /etc/udev/rules.d/99-hide-disks.rules ]; then
+    sudo -A touch /etc/udev/rules.d/99-hide-disks.rules
+fi
+
+log_info "Escondiendo particiones de Recuperación"
+
+if [ "$1" = "run" ]; then
+    sudo -A sh -c 'echo \'SUBSYSTEM=="block", ENV{ID_FS_LABEL}=="RECU", ENV{UDISKS_IGNORE}="1" \' >> /etc/udev/rules.d/99-hide-disks.rules'
+    sudo -A sh -c 'echo \'SUBSYSTEM=="block", ENV{ID_FS_LABEL}=="Recuperación", ENV{UDISKS_IGNORE}="1" \' >> /etc/udev/rules.d/99-hide-disks.rules'
+fi
