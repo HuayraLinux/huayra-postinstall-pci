@@ -1,5 +1,8 @@
 #!/bin/bash
 
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
 if [ ! -f /etc/udev/rules.d/99-hide-disks.rules ]; then
     sudo -A touch /etc/udev/rules.d/99-hide-disks.rules
 fi

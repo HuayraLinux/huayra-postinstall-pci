@@ -1,0 +1,11 @@
+#!/bin/bash
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
+read -r -d '' TEXT << EOM
+El paquete terminó de configurar su netbook. 
+Por favor reinicie la computadora para que los cambios tengan efecto
+EOM
+
+zenity --info --text "$TEXT"
+exit 0
