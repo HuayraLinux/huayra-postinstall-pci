@@ -3,26 +3,30 @@
 scripts=$(dirname $(readlink -f $0))
 
 usage() {
-    echo "Modo de uso: $0 [-r] [-t]"
-    echo ""
-    echo "El parámetro -r realiza modificaciones a los archivos. Con lo cual,"
-    echo "debe utilizarlo cuando esté seguro de lo que está haciendo"
-    echo ""
-    echo "El parametro -t lo puede usar para probar que acciones se van a ejecutar."
-    echo "En este caso, no se ejecuta ninga accion y no se modifica ningun archivo" 1>&2
-    exit 1
+  echo "Modo de uso: $0 [-r] [-t]"
+  echo ""
+  echo "El parámetro -r realiza modificaciones a los archivos. Con lo cual,"
+  echo "debe utilizarlo cuando esté seguro de lo que está haciendo"
+  echo ""
+  echo "El parámetro -t lo puede usar para probar que acciones se van a ejecutar."
+  echo "En este caso, no se ejecuta ninguna acción y no se modifica ningun archivo." 1>&2
+  exit 1
 }
 
 cmd=""
 while getopts ":rt" o; do
     case "${o}" in
     	r)
-            echo "run"
-	    cmd="run"
-            ;;
-	*)
-            usage
-            ;;
+        echo "run"
+        cmd="run"
+        ;;
+    	t)
+        echo "test"
+        cmd="test"
+        ;;
+      *)
+        usage
+        ;;
     esac
 done
 if [ -z "$cmd" ] ; then
