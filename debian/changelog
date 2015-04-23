@@ -1,4 +1,10 @@
-huayra-postinstall-pci (0.19) UNRELEASED; urgency=medium
+huayra-postinstall-pci (0.20) unstable; urgency=medium
+
+  * Correcciones para lintian!
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Wed, 22 Apr 2015 21:03:12 -0300
+
+huayra-postinstall-pci (0.19) unstable; urgency=medium
 
   * correccion de pruebas
   * correccion de dependencia de zenity
