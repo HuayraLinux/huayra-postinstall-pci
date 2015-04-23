@@ -1,0 +1,14 @@
+#!/bin/bash
+
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
+sudo -A dmidecode |grep "BayTrail system"
+if [ $? = 0 ]; then 
+    log_info "BayTrail detectado. Instalando huayra-marble"
+    if [ "$"1 = "run" ]; then
+	sudo -A apt-get install huayra-marble
+    else
+	log_info "sudo -A apt-get install huayra-marble"
+    fi
+fi
