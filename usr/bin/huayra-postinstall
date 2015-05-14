@@ -3,13 +3,29 @@
 scripts=$(dirname $(readlink -f $0))
 
 usage() {
-  echo "Modo de uso: $0 [-r] [-t]"
+  echo "Modo de uso: $0 [-r] [-t] <imagen>"
   echo ""
   echo "El parámetro -r realiza modificaciones a los archivos. Con lo cual,"
   echo "debe utilizarlo cuando esté seguro de lo que está haciendo"
   echo ""
   echo "El parámetro -t lo puede usar para probar que acciones se van a ejecutar."
-  echo "En este caso, no se ejecuta ninguna acción y no se modifica ningun archivo." 1>&2
+  echo "En este caso, no se ejecuta ninguna acción y no se modifica ningun archivo."
+  echo ""
+  echo "En <imagen> debe ir la referencia del nombre de la imagen de netbooks que salieron"
+  echo "de fábrica originalmente. Por ahora solo están soportado los siguientes:"
+  echo ""
+  echo "2013: Equipos con particiones de Huarya 1.1, Winodws, y la de datos es FAT32"
+  echo ""
+  echo "2014: Equipos con Bios UEFI (Plataforma MarblePoint) con Windows 8 y Huayra 2.x"
+  echo "      La partición de DATOS viene en formato NTFS" 
+  echo ""
+  echo "Ejemplo de uso para probar (tests) en una imagen 2014:"
+  echo "  $0 -t 2014"
+  echo ""
+  echo "Ejemplo para ejecutar los scripts de post instalación para una 2013:"
+  echo "  $0 -r 2013"
+  echo "" 1>&2
+
   exit 1
 }
 
@@ -33,4 +49,4 @@ if [ -z "$cmd" ] ; then
     usage
 fi
 shift $((OPTIND-1))
-run-parts --report --exit-on-error $scripts/../share/huayra-postinstall-pci/2014.d -a $cmd
+run-parts --report --exit-on-error $scripts/../share/huayra-postinstall-pci/$1.d -a $cmd

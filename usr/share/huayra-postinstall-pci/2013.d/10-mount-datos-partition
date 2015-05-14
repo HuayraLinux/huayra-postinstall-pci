@@ -1,0 +1,46 @@
+#!/bin/bash
+
+
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
+log_info "Crear puntos de montaje si no existen"
+if [ "$1" = "run" ]; then
+  sudo -A mkdir -p /media/DATOS
+else
+  log_info "sudo -A mkdir -p /media/DATOS"
+fi
+
+log_info "Comprobar si existe /etc/fstab"
+
+if [ ! -f /etc/fstab ]; then
+  log_error "No existe /etc/fstab"
+  exit 1
+fi
+
+sudo -A sh -c 'blkid -L DATOS >> /dev/null'
+if [ ! $? -eq 0 ]; then
+  log_error "No hay una partición con label DATOS"
+  exit 1
+fi
+log_info "Backup del fstab"
+if [ "$1" = "run" ]; then
+  sudo -A cp /etc/fstab /var/backups/fstab.bak.10
+else
+  log_info "sudo -A cp /etc/fstab /var/backups/fstab.bak.10"
+fi
+
+log_info "Agregando entradas al fstab"
+if [ "$1" = "run" ]; then
+  sudo -A sh -c 'echo "LABEL=DATOS /media/DATOS vfat user,dmask=002,fmask=113,gid=users 0 0" >> /etc/fstab'
+else
+  log_info "sudo -A sh -c 'echo \"LABEL=DATOS /media/DATOS vfat user,dmask=002,fmask=113,gid=users 0 0\" >> /etc/fstab'"
+fi
+
+log_info "Montar las particiones"
+if [ "$1" = "run" ]; then
+  sudo -A mount -a
+else
+  log_info "sudo -A mount -a"
+fi
+exit 0

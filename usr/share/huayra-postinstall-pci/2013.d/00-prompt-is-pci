@@ -1,0 +1,22 @@
+#!/bin/bash
+
+common=$(dirname $(readlink -f $0))
+source $common/../postinstall-common
+
+
+read -r -d '' TEXT << EOM
+Esta aplicación instalará configuraciones pensadas *solamente* para las
+netbooks del Programa Conectar Igualdad.
+
+AVISO: Si ésta computadora no es del Programa, se podrían perder datos o algunas
+aplicaciones podrían dejar de funcionar.
+
+¿Desea continuar con la instalación?
+EOM
+
+zenity --question --text="$TEXT" $USER
+
+if [ $? = 1 ]; then
+  zenity --info --text "Instalación cancelada."
+  exit 1
+fi
