@@ -14,7 +14,7 @@ usage() {
   echo "En <imagen> debe ir la referencia del nombre de la imagen de netbooks que salieron"
   echo "de fábrica originalmente. Por ahora solo están soportado los siguientes:"
   echo ""
-  echo "2013: Equipos con particiones de Huarya 1.1, Winodws, y la de datos es FAT32"
+  echo "2013: Equipos con particiones de Huarya 1.1, Windows, y la de datos es FAT32"
   echo ""
   echo "2014: Equipos con Bios UEFI (Plataforma MarblePoint) con Windows 8 y Huayra 2.x"
   echo "      La partición de DATOS viene en formato NTFS" 

@@ -3,7 +3,7 @@
 huayra-postinstall-pci \- Configura una instalación de Huayra
 .SH SYNOPSIS
 .B huayra-postinstall-pci
-[\fI-r\fR] [\fI-t\fR]
+[\fI-r\fR] [\fI-t\fR] <version-imagen>
 .SH DESCRIPTION
 Ejecuta una serie de scrips para configurar Hauyra recién instalado
 con los datos de la imágen de disco original de fábrica.
@@ -17,6 +17,10 @@ modifiquen los datos del disco, serán aplicadas.
 \fB\-t\fR
 (modo TEST) No se aplican las modificaciones a la información. Útil para probar
 antes de romper todo.
+.TP
+\fB\<version-imagen>\fR
+Indica la versión de imágen de fábrica que tiene en su netbook (2014, 2015).
+Por favor lea la documentación COMPLETA para conocer cual es la versión que debe utilizar.
 .SH AUTHORS
 .B huayra-postinstall-pci
 was written by Huayra Developers <http://huayra.conectarigualdad.gob.ar/>.
