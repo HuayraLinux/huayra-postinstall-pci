@@ -1,21 +1,21 @@
 # Huayra-Postinstall PCI
 
-La intención de este paquete es poder terminar de configurar las netbooks 
-del Programa Conectar Igualdad que fueron entregadas con alguna otra 
-distribución de GNU/Linux anterior. 
+La intención del paquete es poder terminar de configurar la última versión de Huayra las netbooks del Programa Conectar Igualdad que fueron entregadas con una anterior u otra distribución de GNU/Linux. 
 
 Por favor, *LEA ATENTAMENTE TODA LA DOCUMENTACIÓN* para conocer que implicancia tiene el uso de
 éste paquete.
+
 Se recomienda ejecutarlo inmediatamente después de la instalación de Huayra GNU/Linux
 
 ## Detalle
 
-Este paquete agrega el comando huayra-postintall
+Éste paquete agrega el comando **huayra-postintall**
 
-Al ejecutar este comando, se lanzan una serie de scripts que modifican configuraciones
-de la netbook para dejarla similar a las que vienen de fábrica.
-Por ejemplo, se agrega al fstab las particiones de DATOS y RECURSOS (ésta última en el caso de imágenes nuevas >= 2014) 
-Así como tambén los links symbólicos de las carpetas de usuario (Documentos, Imágenes, Música, etc) a la partición de DATOS entre otras acciones.
+Al ejecutar el comando, se lanzan una serie de scripts que modifican configuraciones de la netbook para dejarla similar a las que vienen de fábrica.
+
+Por ejemplo, se agrega al fstab las particiones de DATOS y RECURSOS (ésta última en el caso de imágenes nuevas >= 2014).
+
+Así como también los links symbólicos de las carpetas de usuario (Documentos, Imágenes, Música, etc) a la partición de DATOS entre otras acciones.
 
 Antes de ejecutarlo debe conocer cual es su versión de imágen que vino con la netbook. Para que las configuraciones se adapten segun sea el caso.
 
@@ -35,17 +35,17 @@ Device     Boot     Start       End   Sectors   Size Id Type
 /dev/sda6       209728638 216023039   6294402     3G 82 Linux swap / Solaris
 /dev/sda7       216026118 625141759 409115642 195,1G  b W95 FAT32
 ```
-sda1: Partición raiz donde se encuentra instalado el actual GNU/Linux
-sda2: Partición donde está instalado windows
-sda3: Partición extendida de DATOS
-sda5: Es la particion que contiene el sistema de recuperación de imágenes
-sda6: Partición de intercambio (swap)
+*sda1*: Partición raiz donde se encuentra instalado el actual GNU/Linux
+*sda2*: Partición donde está instalado windows
+*sda3*: Partición extendida de DATOS
+*sda5*: Es la particion que contiene el sistema de recuperación de imágenes
+*sda6*: Partición de intercambio (swap)
 
 Contienen un directorio llamado "Mis Cosas" en la particion de DATOS donde se encuentran los archivos y docuementos del usuario.
 
 ### 2014
 
-Son las entrgadas con la plataforma MarblePoint, tienen la particularidad de que se puede rotar la cámara web, bios EFI y contenían Huayra 2.x
+Son las entregadas con la plataforma MarblePoint dusrante el 2014, tienen la particularidad de que se puede rotar la cámara web, bios EFI y contenían Huayra 2.x
 
 La tabla de particiones es GPT y similar a la siguiente (para visualizarla debe tener instalado el paquete gdisk y hacer sudo gdisk -l /dev/sda):
 
@@ -79,28 +79,28 @@ Number  Start (sector)    End (sector)  Size       Code  Name
    9       292694016       625141759   158.5 GiB   0700  
 ```
 
-1: Partición raiz de GNU/Linux
-3: Partición de arranque EFI (fat32)
-5: Instalación de windows
-6: Sistema de recuperación
-7: Partición deintercambio (sqap)
-8: Partición de RECURSOS (solo lectura)
-9: Partición de DATOS
+*1*: Partición raiz de GNU/Linux
+*3*: Partición de arranque EFI (fat32)
+*5*: Instalación de windows
+*6*: Sistema de recuperación
+*7*: Partición de intercambio (swap)
+*8*: Partición de RECURSOS (solo lectura)
+*9*: Partición de DATOS
 
 ## Modo de uso
 
-Una vez detectado que imagen tiene su netbook (2013 o 2014) se puede realizar una prueba de los scripts antes de modificar los datos
+Una vez detectado que imagen tiene su netbook (2013 o 2014) se puede realizar una prueba de los scripts antes de modificar los datos con el parámetro -t (test)
 
 ```
 $ huayra-postinstall -t 2014
 ```
-Si todo esta correcto podemos ejecutar finalmenter el comando apra que realice los cambios en el equipo:
+Si todo está correcto podemos ejecutar finalmente el comando para que realice los cambios en el equipo con el parámetro -r (run):
 
 ```
 $ huayra-postinstall -r 2014
 ```
+Luego de finalizar este proceso, se debe reiniciar el equipo para que se apliquen todos los cambios.
 
-Para ver el codigo de los scripts que se ejcutan, puede acceder al mismo desde /usr/share/huayra-postinstall-pci/ donde estan los directorio 2013.d y 2014.d respectivamente.
+Para ver el código de los scripts, se puede ingresar a /usr/share/huayra-postinstall-pci/ donde están los directorios **2013.d** y **2014.d** respectivamente. Aquí están cada uno de los archivos que se ejecutan.
 
 Por favor si encuentra algun error, notifíquelo en http://bugs.huayra.conectarigualdad.gob.ar
-
