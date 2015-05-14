@@ -1,18 +1,14 @@
-Postinstall PCI
-======
-
-Huayra-Postinstall PCI
+# Huayra-Postinstall PCI
 
 La intención de este paquete es poder terminar de configurar las netbooks 
 del Programa Conectar Igualdad que fueron entregadas con alguna otra 
 distribución de GNU/Linux anterior. 
 
-Por favor, LEA ATENTAMENTE toda la documentación para conocer que implicancia tiene el uso de
+Por favor, *LEA ATENTAMENTE TODA LA DOCUMENTACIÓN* para conocer que implicancia tiene el uso de
 éste paquete.
 Se recomienda ejecutarlo inmediatamente después de la instalación de Huayra GNU/Linux
 
-Detalle
-======
+## Detalle
 
 Este paquete agrega el comando huayra-postintall
 
@@ -25,12 +21,12 @@ Antes de ejecutarlo debe conocer cual es su versión de imágen que vino con la 
 
 Actualmente éste script puede configurar netbooks que salieron con imagenes 2013 y 2014 respectivamente 
 
-2013
-======
+### 2013
 
 Son las netbooks entregadas durante el 2013 con Huayra 1.1. Estas contienen la tabla de 
 particiones similar a la siguiente (puede obtener ésta información haciendo sudo fdisk -l desde una terminal):
 
+```
 Device     Boot     Start       End   Sectors   Size Id Type
 /dev/sda1  *         2048  83890175  83888128    40G 83 Linux
 /dev/sda2        83891430 167782859  83891430    40G  7 HPFS/NTFS/exFAT
@@ -38,7 +34,7 @@ Device     Boot     Start       End   Sectors   Size Id Type
 /dev/sda5       167782923 209728574  41945652    20G 83 Linux
 /dev/sda6       209728638 216023039   6294402     3G 82 Linux swap / Solaris
 /dev/sda7       216026118 625141759 409115642 195,1G  b W95 FAT32
-
+```
 sda1: Partición raiz donde se encuentra instalado el actual GNU/Linux
 sda2: Partición donde está instalado windows
 sda3: Partición extendida de DATOS
@@ -47,13 +43,13 @@ sda6: Partición de intercambio (swap)
 
 Contienen un directorio llamado "Mis Cosas" en la particion de DATOS donde se encuentran los archivos y docuementos del usuario.
 
-2014
-======
+### 2014
 
 Son las entrgadas con la plataforma MarblePoint, tienen la particularidad de que se puede rotar la cámara web, bios EFI y contenían Huayra 2.x
 
 La tabla de particiones es GPT y similar a la siguiente (para visualizarla debe tener instalado el paquete gdisk y hacer sudo gdisk -l /dev/sda):
 
+```
 GPT fdisk (gdisk) version 0.8.5
 
 Partition table scan:
@@ -81,6 +77,7 @@ Number  Start (sector)    End (sector)  Size       Code  Name
    7       210905088       219293695   4.0 GiB     8200  
    8       219293696       292694015   35.0 GiB    0700  
    9       292694016       625141759   158.5 GiB   0700  
+```
 
 1: Partición raiz de GNU/Linux
 3: Partición de arranque EFI (fat32)
@@ -90,19 +87,20 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 8: Partición de RECURSOS (solo lectura)
 9: Partición de DATOS
 
-Modo de uso
-======
+## Modo de uso
 
 Una vez detectado que imagen tiene su netbook (2013 o 2014) se puede realizar una prueba de los scripts antes de modificar los datos
 
+```
 $ huayra-postinstall -t 2014
-
+```
 Si todo esta correcto podemos ejecutar finalmenter el comando apra que realice los cambios en el equipo:
 
+```
 $ huayra-postinstall -r 2014
+```
 
-Para ver el codigo de los scripts que se ejcutan, puede acceder al mismo desde /usr/share/huayra-postinstall-pci/ donde estan
-los directorio 2013.d y 2014.d respectivamente.
+Para ver el codigo de los scripts que se ejcutan, puede acceder al mismo desde /usr/share/huayra-postinstall-pci/ donde estan los directorio 2013.d y 2014.d respectivamente.
 
 Por favor si encuentra algun error, notifíquelo en http://bugs.huayra.conectarigualdad.gob.ar
 
