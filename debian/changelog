@@ -1,3 +1,11 @@
+huayra-postinstall-pci (0.23) unstable; urgency=medium
+
+  * correccion de scripts 2014
+  * agregando mas documentacion
+  * agregando scripts para imagn 2013
+
+ -- Fernando Toledo <ragnarok@docksud.com.ar>  Thu, 14 May 2015 17:17:00 -0300
+
 huayra-postinstall-pci (0.22) unstable; urgency=medium
 
   * version .22 con correcciones varias 
