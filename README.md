@@ -36,9 +36,13 @@ Device     Boot     Start       End   Sectors   Size Id Type
 /dev/sda7       216026118 625141759 409115642 195,1G  b W95 FAT32
 ```
 *sda1*: Partición raiz donde se encuentra instalado el actual GNU/Linux
+
 *sda2*: Partición donde está instalado windows
+
 *sda3*: Partición extendida de DATOS
+
 *sda5*: Es la particion que contiene el sistema de recuperación de imágenes
+
 *sda6*: Partición de intercambio (swap)
 
 Contienen un directorio llamado "Mis Cosas" en la particion de DATOS donde se encuentran los archivos y docuementos del usuario.
@@ -80,16 +84,24 @@ Number  Start (sector)    End (sector)  Size       Code  Name
 ```
 
 *1*: Partición raiz de GNU/Linux
+
 *3*: Partición de arranque EFI (fat32)
+
 *5*: Instalación de windows
+
 *6*: Sistema de recuperación
+
 *7*: Partición de intercambio (swap)
+
 *8*: Partición de RECURSOS (solo lectura)
+
 *9*: Partición de DATOS
 
 ## Modo de uso
 
 Una vez detectado que imagen tiene su netbook (2013 o 2014) se puede realizar una prueba de los scripts antes de modificar los datos con el parámetro -t (test)
+
+*NOTA*: Debe ejecutarlo como usuario *alumno* (no como usuario root), en caso que se necesite acceso root, se le pedirá la clave del mismo cuando sea conveniente.  
 
 ```
 $ huayra-postinstall -t 2014
