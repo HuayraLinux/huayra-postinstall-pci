@@ -31,10 +31,10 @@ for i in Compartido Descargas Música Documentos Imágenes Videos; do
 
     log_info "Creando symlinks"
     if [ "$1" = "run" ]; then
-      mkdir -p "/media/DATOS/usuario/$USERNAME/$i"
+      mkdir -p "/media/DATOS/usuarios/$USERNAME/$i"
       ln -s "/media/DATOS/usuarios/$USERNAME/$i/" "$HOME/$i"
     else
-      log_info "mkdir -p \"/media/DATOS/usuario/$USERNAME/$i\""
+      log_info "mkdir -p \"/media/DATOS/usuarios/$USERNAME/$i\""
       log_info "ln -s \"/media/DATOS/usuarios/$USERNAME/$i/\" \"$HOME/$i\""
     fi
   fi;
