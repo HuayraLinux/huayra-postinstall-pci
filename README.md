@@ -9,7 +9,7 @@ Se recomienda ejecutarlo inmediatamente después de la instalación de Huayra GN
 
 ## Detalle
 
-Éste paquete agrega el comando **huayra-postintall**
+Éste paquete agrega el comando **huayra-postinstall-pci**
 
 Al ejecutar el comando, se lanzan una serie de scripts que modifican configuraciones de la netbook para dejarla similar a las que vienen de fábrica.
 
